@@ -12,14 +12,23 @@ from PyPDF2 import PdfReader
 # ================= PAGE CONFIG =================
 st.set_page_config(page_title="MentorBridge AI", layout="wide")
 
-# ================= SIMPLE CLEAN UI =================
+# ================= WHITE/LIGHT THEME =================
 st.markdown("""
 <style>
-.stApp { background-color: #f4f6f9; }
-section[data-testid="stSidebar"] {
+/* Main app background */
+.stApp {
     background-color: #ffffff;
-    border-right: 1px solid #e2e8f0;
+    color: #1f2937;  /* dark gray text for readability */
 }
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: #f9fafb;
+    color: #1f2937;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Buttons */
 .stButton>button {
     background: linear-gradient(90deg,#2563eb,#4f46e5);
     color: white;
@@ -27,12 +36,34 @@ section[data-testid="stSidebar"] {
     height: 38px;
     border: none;
 }
+
+/* Input boxes and text areas */
+input, textarea, .stTextInput>div>input, .stTextArea>div>textarea {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+}
+
+/* Cards */
 .card {
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:10px;
-    border:1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+    color: #1f2937;
+}
+
+/* Tables */
+.stDataFrame, .stTable {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #111827;
 }
 </style>
 """, unsafe_allow_html=True)
