@@ -1,4 +1,9 @@
 streamlit
 pymongo
-pandas
+bcrypt
+python-dotenv
 scikit-learn
+pandas
+matplotlib
+seaborn
+PyPDF2
