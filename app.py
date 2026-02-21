@@ -13,57 +13,108 @@ from PyPDF2 import PdfReader
 st.set_page_config(page_title="MentorBridge AI", layout="wide")
 
 # ================= WHITE/LIGHT THEME =================
+# st.markdown("""
+# <style>
+# /* Main app background */
+# .stApp {
+#     background-color: #ffffff;  /* white background */
+#     color: #000000;  /* black text globally */
+# }
+
+# /* Sidebar styling */
+# section[data-testid="stSidebar"] {
+#     background-color: #ffffff;  /* white sidebar */
+#     color: #000000;  /* black text in sidebar */
+#     border-right: 1px solid #d1d5db;
+# }
+
+# /* Buttons */
+# .stButton>button {
+#     background: linear-gradient(90deg,#2563eb,#4f46e5);
+#     color: white;  /* button text white */
+#     border-radius: 6px;
+#     height: 38px;
+#     border: none;
+# }
+
+# /* Input boxes and text areas */
+# input, textarea, .stTextInput>div>input, .stTextArea>div>textarea {
+#     background-color: #ffffff !important;  /* white inputs */
+#     color: #000000 !important;  /* black text inside inputs */
+#     border: 1px solid #d1d5db !important;
+#     border-radius: 6px !important;
+# }
+
+# /* Cards */
+# .card {
+#     background: #ffffff;
+#     padding: 15px;
+#     border-radius: 10px;
+#     margin-bottom: 10px;
+#     border: 1px solid #d1d5db;
+#     color: #000000;  /* black text in cards */
+# }
+
+# /* Tables */
+# .stDataFrame, .stTable {
+#     background-color: #ffffff;
+#     color: #000000;
+# }
+
+# /* Headers */
+# h1, h2, h3, h4, h5, h6 {
+#     color: #000000;
+# }
+# </style>
+# """, unsafe_allow_html=True)
 st.markdown("""
 <style>
 /* Main app background */
-.stApp {
-    background-color: #ffffff;  /* white background */
-    color: #000000;  /* black text globally */
+.stApp, .css-1y0tads, .css-18e3th9 {
+    background-color: #ffffff !important;  /* white background */
+    color: #000000 !important;  /* black text globally */
 }
 
 /* Sidebar styling */
 section[data-testid="stSidebar"] {
-    background-color: #ffffff;  /* white sidebar */
-    color: #000000;  /* black text in sidebar */
-    border-right: 1px solid #d1d5db;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-right: 1px solid #d1d5db !important;
 }
 
 /* Buttons */
 .stButton>button {
-    background: linear-gradient(90deg,#2563eb,#4f46e5);
-    color: white;  /* button text white */
-    border-radius: 6px;
-    height: 38px;
-    border: none;
+    background: linear-gradient(90deg,#2563eb,#4f46e5) !important;
+    color: white !important;
+    border-radius: 6px !important;
+    height: 38px !important;
+    border: none !important;
 }
 
-/* Input boxes and text areas */
-input, textarea, .stTextInput>div>input, .stTextArea>div>textarea {
-    background-color: #ffffff !important;  /* white inputs */
-    color: #000000 !important;  /* black text inside inputs */
+/* Inputs and TextAreas */
+input, textarea, .stTextInput>div>input, .stTextArea>div>textarea, .css-1n76uvr, .css-1w0y5nq {
+    background-color: #ffffff !important;
+    color: #000000 !important;
     border: 1px solid #d1d5db !important;
     border-radius: 6px !important;
 }
 
-/* Cards */
-.card {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #d1d5db;
-    color: #000000;  /* black text in cards */
+/* Cards and markdown text */
+.card, .stMarkdown, .css-1d391kg, .css-ffhzg2 {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 10px !important;
 }
 
 /* Tables */
-.stDataFrame, .stTable {
-    background-color: #ffffff;
-    color: #000000;
+.stDataFrame, .stTable, .css-1v3fvcr {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
 /* Headers */
-h1, h2, h3, h4, h5, h6 {
-    color: #000000;
+h1, h2, h3, h4, h5, h6, .css-10trblm {
+    color: #000000 !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -352,4 +403,5 @@ else:
                         "timestamp":datetime.now()
                     })
                     st.rerun()
+
 
